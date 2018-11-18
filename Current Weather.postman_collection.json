@@ -1,0 +1,462 @@
+{
+	"info": {
+		"_postman_id": "75518a37-6053-4bba-8cce-701eccf99011",
+		"name": "Current Weather",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Search by valid city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=New York&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "New York"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by invalid city",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?q=New Herk&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "q",
+							"value": "New Herk"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by city ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?APPID=8fd9187de37d9d92be4077eecd25f924&id=4761054",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						},
+						{
+							"key": "id",
+							"value": "4761054"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by invalid ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?APPID=8fd9187de37d9d92be4077eecd25f924&id=1111111",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						},
+						{
+							"key": "id",
+							"value": "1111111"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by geographic coordinates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=40&lon=20&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "40"
+						},
+						{
+							"key": "lon",
+							"value": "20"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by invalid geographic coordinates",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?lat=1234&lon=4578&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "1234"
+						},
+						{
+							"key": "lon",
+							"value": "4578"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by Zip code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=10001,us&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "10001,us"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by non-existed Zip code",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "api.openweathermap.org/data/2.5/weather?zip=55555&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"weather"
+					],
+					"query": [
+						{
+							"key": "zip",
+							"value": "55555"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search city within a rectangle zone",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/box/city?bbox=12,32,15,37,10&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"box",
+						"city"
+					],
+					"query": [
+						{
+							"key": "bbox",
+							"value": "12,32,15,37,10"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search city in cycle",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&cnt=20&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "55.5"
+						},
+						{
+							"key": "lon",
+							"value": "37.5"
+						},
+						{
+							"key": "cnt",
+							"value": "20"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search city in cycle with more than max number of cities",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/find?lat=55.5&lon=37.5&cnt=55&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"find"
+					],
+					"query": [
+						{
+							"key": "lat",
+							"value": "55.5"
+						},
+						{
+							"key": "lon",
+							"value": "37.5"
+						},
+						{
+							"key": "cnt",
+							"value": "55"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search by severel cities ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://api.openweathermap.org/data/2.5/group?id=707860,529334,713514&units=metric&APPID=8fd9187de37d9d92be4077eecd25f924",
+					"protocol": "http",
+					"host": [
+						"api",
+						"openweathermap",
+						"org"
+					],
+					"path": [
+						"data",
+						"2.5",
+						"group"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "707860,529334,713514"
+						},
+						{
+							"key": "units",
+							"value": "metric"
+						},
+						{
+							"key": "APPID",
+							"value": "8fd9187de37d9d92be4077eecd25f924"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
